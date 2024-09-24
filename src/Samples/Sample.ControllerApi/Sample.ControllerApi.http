@@ -1,0 +1,64 @@
+@Sample.Api_HostAddress = http://localhost:5109
+
+###
+
+POST {{Sample.Api_HostAddress}}/UniFiWebhook/
+POST:e93244c7-9bb7-44c0-a8b9-50be59207984
+
+{
+  "alarm": {
+    "name": "Sample Alarm",
+    "sources": [],
+    "conditions": [
+      {
+        "condition": {
+          "type": "is",
+          "source": "animal"
+        }
+      }
+    ],
+    "triggers": [
+      {
+        "key": "person",
+        "device": "74ACB99FEA38"
+      }
+    ]
+  },
+  "timestamp": 1726690036088
+}
+
+###
+
+POST {{Sample.Api_HostAddress}}/UniFiWebhook/
+POST:e93244c7-9bb7-44c0-a8b9-50be59207984
+
+{
+  "alarm": {
+    "name": "Sample Alarm",
+    "sources": [
+        {
+          "device": "E438830CFD3F",
+          "type": "exclude"
+        }
+      ],
+    "conditions": [
+      {
+        "condition": {
+          "type": "is",
+          "source": "animal"
+        },
+          "condition": {
+            "type": "is",
+            "source": "vehicle"
+        }
+      }
+    ],
+    "triggers": [
+      {
+        "key": "person",
+        "device": "74ACB99FEA38"
+      }
+    ]
+  },
+  "timestamp": 1726690036088
+}
