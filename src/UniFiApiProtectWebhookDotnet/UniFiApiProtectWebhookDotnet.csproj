@@ -54,7 +54,7 @@
 
 
 	<ItemGroup Condition="'$(Configuration)' == 'Release'">
-		<PackageReference Include="UniFiApiDotnet.Abstraction" Version="1.0.0" />
+		<PackageReference Include="UniFiApiProtectWebhookDotnet.Abstraction" Version="1.0.0" />
 	</ItemGroup>
 
 
