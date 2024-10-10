@@ -49,7 +49,7 @@ jobs:
       run: dotnet nuget add source '${{ env.NuGetDirectory }}'
 
     - name: Pack UniFiApiProtectWebhookDotnet
-      run: dotnet pack src/UniFiApiProtectWebhookDotnet/UniFiApiProtectWebhookDotnet.csproj -p:PackageVersion=1.0.0 --configuration Release --output '${{ env.NuGetDirectory }}'
+      run: dotnet pack src/UniFiApiProtectWebhookDotnet/UniFiApiProtectWebhookDotnet.csproj -p:PackageVersion=1.0.1 --configuration Release --output '${{ env.NuGetDirectory }}'
 
     - name: Publish to GitHub packages 
       run: dotnet nuget push ${{ env.NuGetDirectory }}/*.nupkg -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --skip-duplicate
